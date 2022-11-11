@@ -64,4 +64,18 @@ exports.consultarHistoriaClinica = (req, res) => {
       }
     } else res.send(data);
   });
+
+  // Busca historias clinicas V.2.0
+  // Añadiendo "accept-version: 2.0" en el header
+  exports.consultarHistoriasClinicasV2 = (req, res) => {
+    historiaClinica.find((err, data) => {
+      if (err)
+        res.status(500).send({
+          message:
+            err.message ||
+            "Uppss se explotó el servidor, no se pudieron consultar las historias clinicas.",
+        });
+      else res.send(data);
+    });
+  }
 };

@@ -107,5 +107,11 @@ module.exports = (router) => {
 
   //Ruta para consultar historias clinicas
   //con versión 2.0 añadiendo "accept-version: 2.0"
-  // router.get("/clinica", clinicaController.consultarHistoriasClinicasV2);
+  router.get("/clinica/version2", (req, res) => {
+    let version = req.headers["accept-version"];
+    if (version == "2.0") {
+      return hospitalController.consultarHistoriasClinicasV2;
+    }
+    return hospitalController.consultarHistoriasClinicas;
+  });
 };
