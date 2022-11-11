@@ -77,18 +77,12 @@ module.exports = (router) => {
    *            required: true
    *            content:
    *                application/json:
-   *                schema:
-   *                    type: object
-   *                    $ref: '#/components/schemas/HistoriaClinica'
+   *                    schema:
+   *                        type: object
+   *                        $ref: '#/components/schemas/HistoriaClinica'
    *        responses:
    *            200:
-   *                description: Las historias clinicas fueron consultadas correctamente
-   *                content:
-   *                   application/json:
-   *                    schema:
-   *                        type: array
-   *                        items:
-   *                            $ref: '#/components/schemas/HistoriaClinica'
+   *                description: La historia clinica fue creada correctamente
    */
   router.post("/crearHistoria", clinicaController.crearHistoriaClinica);
 
