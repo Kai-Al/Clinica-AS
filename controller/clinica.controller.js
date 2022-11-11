@@ -59,7 +59,8 @@ exports.consultarHistoriaClinica = (req, res) => {
       } else {
         res.status(500).send({
           message:
-            "Error buscando la historia del paciente con cedula " + req.params.cedula,
+            "Error buscando la historia del paciente con cedula " +
+            req.params.cedula,
         });
       }
     } else res.send(data);
@@ -77,5 +78,5 @@ exports.consultarHistoriaClinica = (req, res) => {
         });
       else res.send(data);
     });
-  }
+  };
 };

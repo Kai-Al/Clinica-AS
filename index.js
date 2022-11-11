@@ -15,7 +15,7 @@ const swaggerSpec = {
     servers: [
       {
         url: "http://localhost:3000",
-      }
+      },
     ],
   },
   apis: [`${path.join(__dirname, "./routes/clinica.routes.js")}`],

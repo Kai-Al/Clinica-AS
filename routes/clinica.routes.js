@@ -1,7 +1,7 @@
 const clinicaController = require("../controller/clinica.controller.js");
 
 module.exports = (router) => {
-    /**
+  /**
    * @swagger
    * components:
    *    schemas:
@@ -30,12 +30,12 @@ module.exports = (router) => {
    *                sintomas:
    *                    type: String
    *                    description: Sintomas del paciente
-   *            example: 
+   *            example:
    *                cedula: 123456789
    *                nombrePaciente: Juan Perez
    *                nombreMedico: Juan Perez
    *                cedulaMedico: 123456789
-   *                sintomas: dolor de cabeza 
+   *                sintomas: dolor de cabeza
    */
 
   /**
@@ -65,8 +65,8 @@ module.exports = (router) => {
    *                description: No se encontraron historias clinicas del paciente
    */
   router.get("/clinica/:cedula", clinicaController.consultarHistoriaClinica);
-   
-   /**
+
+  /**
    * @swagger
    * /api/crearHistoria:
    *    post:
@@ -86,7 +86,7 @@ module.exports = (router) => {
    */
   router.post("/crearHistoria", clinicaController.crearHistoriaClinica);
 
-   /**
+  /**
    * @swagger
    * /api/clinica:
    *    get:
